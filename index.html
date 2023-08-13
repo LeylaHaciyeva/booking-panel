@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/calendar.css">
+</head>
+
+<body>
+    <div>
+        <div class="wrapper">
+            <div class="background">
+                <div class="modal">
+                    <div class="sidebar">
+                        <ol>
+                            <li class="active-link staff-li">Staff</li>
+                            <li class=" service-li">Service</li>
+                            <li class="date-li">Date</li>
+                            <li class="confirm-li">Confirmation</li>
+                        </ol>
+                        <div class="sidebar-bottom">
+                        </div>
+                    </div>
+                    <div class="staff-modal modal-active">
+                        <div class="modal-header">
+                            <h4 class="modal-header-text">Select staff</h4>
+                            <button class="modal-header-btn"><img src="./assets/images/delete-btn.svg" alt=""></button>
+                        </div>
+                        <div class="modal-line"></div>
+                        <ul class="all-staff">
+
+                        </ul>
+                        <button class="staff-warning warning">
+                            <img src="./assets/images/error.svg" alt="">
+                            Select staff</button>
+                        <div class="modal-direction">
+                            <div class="direction-btns">
+                                <button class="prev_btn passive">Back</button>
+                                <button class="next_btn staff_next">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-modal modal-passive">
+                        <div class="modal-header">
+                            <h4 class="modal-header-text">Select service</h4>
+                            <button class="modal-header-btn"><img src="./assets/images/delete-btn.svg" alt=""></button>
+                        </div>
+                        <div class="modal-line"></div>
+
+                        <ul class="all-service">
+                        </ul>
+                        <button class="service-warning warning">
+                            <img src="./assets/images/error.svg" alt="">
+                            Select service</button>
+                        <div class="modal-direction">
+                            <div class="direction-btns">
+                                <button class="prev_btn service_back">Back</button>
+                                <button class="next_btn service_next">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date-modal modal-passive">
+                        <div class="modal-header">
+                            <h4 class="modal-header-text">Select date and time</h4>
+                            <button class="modal-header-btn"><img src="./assets/images/delete-btn.svg" alt=""></button>
+                        </div>
+                        <div class="modal-line"></div>
+                        <div class="date-time">
+                            <div class="calendar-wrapper">
+                                <div class="header">
+                                    <div class="icons">
+                                        <img id="prev" class="material-symbols-rounded"
+                                            style="transform: rotate(-180deg);" src="./assets/images/arrow-up.svg"
+                                            alt="">
+                                        <p class="current-date"></p>
+                                        <img id="next" class="material-symbols-rounded"
+                                            src="./assets/images/arrow-up.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="calendar">
+                                    <ul class="weeks">
+                                        <li>Sun</li>
+                                        <li>Mon</li>
+                                        <li>Tue</li>
+                                        <li>Wed</li>
+                                        <li>Thu</li>
+                                        <li>Fri</li>
+                                        <li>Sat</li>
+                                    </ul>
+                                    <div class="modal-line" style="margin: 8px 0 10px 0;"></div>
+
+                                    <ul class="days"></ul>
+                                </div>
+                            </div>
+                            <div class="time-wrapper">
+                                <h4>Time</h4>
+                                <div class="time-section">
+                                    <div>
+                                        <p class="selected-date">Select date</p>
+                                    </div>
+                                    <div class="modal-line" style="margin: 0;"></div>
+                                    <ul class="time-select">
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="date-warning warning">Select datetime</div>
+                        <div class="modal-direction">
+                            <div class="direction-btns">
+                                <button class="prev_btn date_back">Back</button>
+                                <button class="next_btn date_next">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="confirmation-modal modal-passive">
+                        <div class="modal-header">
+                            <h4 class="modal-header-text">Confirm details</h4>
+                            <button class="modal-header-btn"><img src="./assets/images/delete-btn.svg" alt=""></button>
+                        </div>
+                        <div class="modal-line"></div>
+
+                        <form action="" class="confirmation-form">
+                            <div class="form-groups">
+                                <div class="form-group">
+                                    <label htmlFor="name">Name
+                                        <span>*</span>
+                                    </label>
+                                    <input type="text" name="name" id="name">
+                                </div>
+                                <div class="form-group">
+                                    <label htmlFor="surname">Surname
+                                        <span>*</span>
+                                    </label>
+                                    <input type="text" name="surname" id="surname">
+                                </div>
+                                <div class="form-group">
+                                    <label htmlFor="email">Email
+                                        <span>*</span>
+
+                                    </label>
+                                    <input type="text" name="email" id="email">
+                                </div>
+                                <div class="form-group">
+                                    <label htmlFor="phone">Phone
+                                    </label>
+                                    <input type="text" name="phone" id="phone">
+                                </div>
+                            </div>
+                            <div class="note">
+                                <h4>Note</h4>
+                                <ul>
+
+                                </ul>
+                            </div>
+                            <button type="submit" class="confirmation-btn">confirm booking</button>
+                        </form>
+
+                        <div class="modal-direction">
+                            <div class="direction-btns">
+                                <button class="prev_btn confirm_back ">Back</button>
+                                <button class="next_btn confirm_next" style="display: none;">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="bg-shape" src="./assets/images/header-bg-shape.svg" />
+        </div>
+    </div>
+    <div class="alert alert-success">
+        <div>
+            <img class="success-alert-delete" src="./assets/images/delete-btn.svg" alt="">
+            <p class="alert-text alert-success-text">
+                Confirmation successfully completed!
+            </p>
+        </div>
+    </div>
+    <div class="alert alert-warning">
+        <div>
+            <img class="warning-alert-delete" src="./assets/images/delete-btn.svg" alt="">
+            <p class="alert-text alert-warning-text">
+                Please, fill the all required fields!
+            </p>
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
